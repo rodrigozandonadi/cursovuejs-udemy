@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue.js - Classbinding</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="materialize/dist/css/materialize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">    
+                <div class="col s12">
+                    <div id="root">
+
+                        <h1 class="red-text text-darken-2">V-Binding no Vue.js</h1>
+                        <p>Relembrando o v-bind</p>
+                    
+                        <button type="" title="Título do Botão">Passe o mouse sobre o botão</button>
+                        <button type="" v-bind:title="titulo">Passe o mouse sobre o botão</button>
+                        <button type="" :title="outroTitulo">Passe o mouse sobre o botão</button>
+
+                        <h1 class="red-text text-darken-2">Class Binding</h1>
+                        <p v-bind:class="{'is-loading' : isLoading, 'color-blue' : isBlue}" @click="toggleClass">Olá class binding</p>
+                        <p v-bind:class="classObject">Olá class binding com objeto</p>
+                        <p v-bind:class="[className, classBackgroundGrenn]">Olá class binding com array</p>
+                        <p v-bind:style="{color: azul, fontSize: 20 + 'px'}">Olá style binding</p>
+                        <p v-bind:style="styleObject">Outro olá style binding</p>
+
+                    </div>
+                </div>            
+                
+            </div>
+        </div>
+        
+        <script src="jquery/dist/jquery.min.js"></script>
+        <script src="materialize/dist/js/materialize.min.js"></script>
+        <script src="vue/dist/vue.min.js"></script>
+        <script src="js/classbinding.js"></script>
+        <script src="js/vuecomponents.js"></script>
+    </body>
+</html>

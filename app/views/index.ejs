@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="materialize/dist/css/materialize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">                
+                <div id="app">
+                    <h1>{{ title }}</h1>
+                    <p>{{ message }}, {{ user }}.</p>
+                </div>
+                <div id="app2">
+                    <span v-bind:title='message'>Hover your mouse</span>
+                </div>
+                <div id="app3">
+                    <p v-if='seen'>Agora você vê</p>
+                    <p v-if='!seen'>Agora você não vê</p>
+                </div>
+                <div id="app4">
+                    <ul>
+                        <li v-for='todo in todos'>{{ todo.text }} - {{ todo.category }}</li>
+                    </ul>
+                </div>
+                <div id="app5">
+                    <p>{{ message }}</p>
+                    <button @click='reverseMessage'>Inverter Mensagem</button>
+                </div>
+                <div id="app6">
+                    <p>{{ message }}</p>
+                    <input v-model='message'>
+                </div>
+            </div>
+        </div>
+        
+        <script src="jquery/dist/jquery.min.js"></script>
+        <script src="materialize/dist/js/materialize.min.js"></script>
+        <script src="vue/dist/vue.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/vuecomponents.js"></script>
+    </body>
+</html>

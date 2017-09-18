@@ -1,0 +1,24 @@
+{
+  "name": "vuejs",
+  "description": "a course of web development with javascript using vue.js",
+  "main": "app/publi/js/script.js",
+  "keywords": [
+    "vue.js"
+  ],
+  "authors": [
+    "Rodrigo Zan"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.2.6",
+    "materialize": "^0.98.2"
+  }
+}
