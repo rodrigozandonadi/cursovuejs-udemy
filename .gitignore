@@ -1,0 +1,4 @@
+node_modules
+app/public/jquery
+app/public/materialize
+app/public/vue
