@@ -51,3 +51,10 @@ var app6 = new Vue({
         message: 'Two way data binding com v-model'
     }
 })
+
+var app6 = new Vue({
+    el: '#app6',
+    data: {
+        message: 'Two way data binding com v-model'
+    }
+})

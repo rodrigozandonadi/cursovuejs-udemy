@@ -5,7 +5,7 @@ var root = new Vue({
         outroTitulo: 'testando o short code do vue.js',
         className: 'color-blue',     
         isLoading: false,
-        isBlue: true   ,
+        isBlue: false,
         classBackgroundGrenn: 'back-green',
         azul: 'blue',
         styleObject: {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="materialize/dist/css/materialize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <p>{{ mensagem }}</p>
+                <div v-once>{{ mensagem }}</div> <!-- O v-once garante que a informação aqui contida pelo binding não seja alterada -->
+                <div v-html="conteudoEmHTML"></div> <!-- o v-html renderiza os estilos das tags HTML, como strong, em e u -->
+                <div v-text="conteudoEmHTML"></div> <!-- o v-html não renderiza os estilos das tags HTML, mostrando o texto como foi salvo no banco... como se fosse uma string -->
+
+                <div v-bind:id="conteudoEmHTML">Div dinâmico</div> <!--  -->
+                <button v-bind:disabled="expressaoBooleana">Button</button> <!--  -->
+            </div>
+        </div>
+        
+        <script src="jquery/dist/jquery.min.js"></script>
+        <script src="materialize/dist/js/materialize.min.js"></script>
+        <script src="vue/dist/vue.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/vuecomponents.js"></script>
+
+        <script>
+            var app = new Vue ({
+                el: '.container',
+                data: {
+                    mensagem: 'Olá!',
+                    conteudoEmHTML: '<b>Olha o negrito aqui</b>',
+                    dynamicId: 'divDinamico',
+                    expressaoBooleana: true
+                },
+                computed: {},
+                methods: {}           
+            })            
+        </script>
+    </body>
+</html>
